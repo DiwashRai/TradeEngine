@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED On)
 set(CMAKE_CXX_EXTENSIONS off)
 
 set(CMAKE_CXX_COMPILER "$ENV{HOME}/source_builds/gcc-14-build/bin/g++")
+set(Boost_NO_WARN_NEW_VERSIONS 1)
 
 if (UNIX AND NOT APPLE)
     link_directories("$ENV{HOME}/source_builds/gcc-14-build/lib64")
