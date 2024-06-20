@@ -12,4 +12,5 @@ if (UNIX AND NOT APPLE)
     link_directories("$ENV{HOME}/source_builds/gcc-14-build/lib64")
 endif()
 
-add_subdirectory(ExchangeRelay)
+add_subdirectory(ReplayClient)
+add_subdirectory(ReplayServer)
