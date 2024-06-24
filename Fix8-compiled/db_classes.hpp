@@ -48,6 +48,9 @@ HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 //-------------------------------------------------------------------------------------------------
 #include <fix8/f8config.h>
+#include <fix8/f8includes.hpp>
+#include "db_types.hpp"
+#include "db_router.hpp"
 #if defined FIX8_MAGIC_NUM && FIX8_MAGIC_NUM > 16793603L
 #error db_classes.hpp version 1.4.3 is out of date. Please regenerate with f8c.
 #endif
@@ -86,7 +89,7 @@ class db_Router;
 class Heartbeat : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 1;
 
@@ -104,7 +107,7 @@ public:
 class TestRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 1;
 
@@ -122,7 +125,7 @@ public:
 class ResendRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 2;
 
@@ -140,7 +143,7 @@ public:
 class Reject : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 7;
 
@@ -158,7 +161,7 @@ public:
 class SequenceReset : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 2;
 
@@ -176,7 +179,7 @@ public:
 class Logout : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 3;
 
@@ -194,7 +197,7 @@ public:
 class IndicationofInterest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 38;
 
@@ -265,7 +268,7 @@ public:
 class Advertisement : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 34;
 
@@ -282,7 +285,7 @@ public:
 class ExecutionReport : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 92;
 
@@ -324,7 +327,7 @@ public:
 class OrderCancelReject : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 15;
 
@@ -341,7 +344,7 @@ public:
 class Logon : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 7;
 
@@ -384,7 +387,7 @@ public:
 class News : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 11;
 
@@ -476,7 +479,7 @@ public:
 class Email : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 13;
 
@@ -568,7 +571,7 @@ public:
 class NewOrderSingle : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 71;
 
@@ -639,7 +642,7 @@ public:
 class NewOrderList : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 12;
 
@@ -738,7 +741,7 @@ public:
 class OrderCancelRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 35;
 
@@ -755,7 +758,7 @@ public:
 class OrderCancelReplaceRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 70;
 
@@ -826,7 +829,7 @@ public:
 class OrderStatusRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 25;
 
@@ -843,7 +846,7 @@ public:
 class Allocation : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 46;
 
@@ -963,7 +966,7 @@ public:
 class ListCancelRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 5;
 
@@ -980,7 +983,7 @@ public:
 class ListExecute : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 7;
 
@@ -997,7 +1000,7 @@ public:
 class ListStatusRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 4;
 
@@ -1014,7 +1017,7 @@ public:
 class ListStatus : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 11;
 
@@ -1056,7 +1059,7 @@ public:
 class AllocationACK : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 10;
 
@@ -1073,7 +1076,7 @@ public:
 class DontKnowTrade : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 30;
 
@@ -1090,7 +1093,7 @@ public:
 class QuoteRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 2;
 
@@ -1132,7 +1135,7 @@ public:
 class Quote : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 38;
 
@@ -1149,7 +1152,7 @@ public:
 class SettlementInstructions : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 36;
 
@@ -1166,7 +1169,7 @@ public:
 class MarketDataRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 7;
 
@@ -1237,7 +1240,7 @@ public:
 class MarketDataSnapshotFullRefresh : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 24;
 
@@ -1279,7 +1282,7 @@ public:
 class MarketDataIncrementalRefresh : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 2;
 
@@ -1321,7 +1324,7 @@ public:
 class MarketDataRequestReject : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 5;
 
@@ -1338,7 +1341,7 @@ public:
 class QuoteCancel : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 6;
 
@@ -1380,7 +1383,7 @@ public:
 class QuoteStatusRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 22;
 
@@ -1397,7 +1400,7 @@ public:
 class QuoteAcknowledgement : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 8;
 
@@ -1467,7 +1470,7 @@ public:
 class SecurityDefinitionRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 27;
 
@@ -1509,7 +1512,7 @@ public:
 class SecurityDefinition : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 29;
 
@@ -1551,7 +1554,7 @@ public:
 class SecurityStatusRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 23;
 
@@ -1568,7 +1571,7 @@ public:
 class SecurityStatus : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 36;
 
@@ -1585,7 +1588,7 @@ public:
 class TradingSessionStatusRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 5;
 
@@ -1602,7 +1605,7 @@ public:
 class TradingSessionStatus : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 15;
 
@@ -1619,7 +1622,7 @@ public:
 class header : public MessageBase
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 27;
 
@@ -1651,7 +1654,7 @@ public:
 class MassQuote : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 6;
 
@@ -1721,7 +1724,7 @@ public:
 class BusinessMessageReject : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 7;
 
@@ -1738,7 +1741,7 @@ public:
 class BidRequest : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 29;
 
@@ -1809,7 +1812,7 @@ public:
 class BidResponse : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 3;
 
@@ -1851,7 +1854,7 @@ public:
 class ListStrikePrice : public Message
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 3;
 
@@ -1893,7 +1896,7 @@ public:
 class trailer : public MessageBase
 {
    static F8_FIX4200_API const FieldTrait _traits[];
-   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha; 
+   static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
    static F8_FIX4200_API const unsigned _fieldcnt = 3;
 

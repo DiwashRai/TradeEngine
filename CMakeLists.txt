@@ -12,5 +12,7 @@ if (UNIX AND NOT APPLE)
     link_directories("$ENV{HOME}/source_builds/gcc-14-build/lib64")
 endif()
 
+add_subdirectory(Fix8-compiled)
 add_subdirectory(ReplayClient)
 add_subdirectory(ReplayServer)
+add_subdirectory(Utils)
