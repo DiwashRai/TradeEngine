@@ -97,7 +97,7 @@ const char *cn[] // Component names
 } // namespace
 
 //-------------------------------------------------------------------------------------------------
-const FIX4200::db_BaseMsgEntry::Pair msgpairs[] 
+const FIX4200::db_BaseMsgEntry::Pair msgpairs[]
 {
    { "0", { Type2Type<FIX4200::Heartbeat>(), "Heartbeat" } },
    { "1", { Type2Type<FIX4200::TestRequest>(), "TestRequest" } },
@@ -155,7 +155,7 @@ extern const db_BaseEntry::Pair fldpairs[];
 const F8MetaCntx& ctx() // avoid SIOF
 {
    static const db_BaseMsgEntry bme(msgpairs, 48);
-   static const db_BaseEntry be(fldpairs, 400);
+   static const db_BaseEntry be(fldpairs, 402);
    static const F8MetaCntx _ctx(4200, bme, be, cn, "FIX.4.2");
    return _ctx;
 }

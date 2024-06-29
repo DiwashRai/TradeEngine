@@ -42,6 +42,7 @@
     <log     name="session_log_file"
              type="session"
              filename="./log/myfix_client_session.log"
+             delimiter="[]"
              rotation="1"
              levels="debug|info|warn|error|fatal"
              flags="sequence|timestamp|sstart|thread|location|level"/>

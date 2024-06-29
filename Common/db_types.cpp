@@ -86,429 +86,429 @@ namespace FIX4200 {
 namespace {
 
 //-------------------------------------------------------------------------------------------------
-const char AdvSide_realm[]  
+const char AdvSide_realm[]
    { 'B', 'S', 'T', 'X' };
-const char *AdvSide_descriptions[]  
+const char *AdvSide_descriptions[]
    { "BUY", "SELL", "TRADE", "CROSS" };
-const f8String AdvTransType_realm[]  
+const f8String AdvTransType_realm[]
    { "C", "N", "R" };
-const char *AdvTransType_descriptions[]  
+const char *AdvTransType_descriptions[]
    { "CANCEL", "NEW", "REPLACE" };
-const char CommType_realm[]  
+const char CommType_realm[]
    { '1', '2', '3' };
-const char *CommType_descriptions[]  
+const char *CommType_descriptions[]
    { "PER_SHARE", "PERCENTAGE", "ABSOLUTE" };
-const f8String ExecInst_realm[]  
+const f8String ExecInst_realm[]
    { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "I", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W" };
-const char *ExecInst_descriptions[]  
+const char *ExecInst_descriptions[]
    { "STAY_ON_OFFERSIDE", "NOT_HELD", "WORK", "GO_ALONG", "OVER_THE_DAY", "HELD", "PARTICIPATE_DONT_INITIATE", "STRICT_SCALE", "TRY_TO_SCALE", "STAY_ON_BIDSIDE", "NO_CROSS", "OK_TO_CROSS", "CALL_FIRST", "PERCENT_OF_VOLUME", "DO_NOT_INCREASE", "DO_NOT_REDUCE", "ALL_OR_NONE", "INSTITUTIONS_ONLY", "LAST_PEG", "MID_PRICE_PEG", "NON_NEGOTIABLE", "OPENING_PEG", "MARKET_PEG", "PRIMARY_PEG", "SUSPEND", "FIXED_PEG_TO_LOCAL_BEST_BID_OR_OFFER_AT_TIME_OF_ORDER", "CUSTOMER_DISPLAY_INSTRUCTION", "NETTING", "PEG_TO_VWAP" };
-const char ExecTransType_realm[]  
+const char ExecTransType_realm[]
    { '0', '1', '2', '3' };
-const char *ExecTransType_descriptions[]  
+const char *ExecTransType_descriptions[]
    { "NEW", "CANCEL", "CORRECT", "STATUS" };
-const char HandlInst_realm[]  
+const char HandlInst_realm[]
    { '1', '2', '3' };
-const char *HandlInst_descriptions[]  
+const char *HandlInst_descriptions[]
    { "AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION", "AUTOMATED_EXECUTION_ORDER_PUBLIC_BROKER_INTERVENTION_OK", "MANUAL_ORDER_BEST_EXECUTION" };
-const f8String IDSource_realm[]  
+const f8String IDSource_realm[]
    { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-const char *IDSource_descriptions[]  
+const char *IDSource_descriptions[]
    { "CUSIP", "SEDOL", "QUIK", "ISIN_NUMBER", "RIC_CODE", "ISO_CURRENCY_CODE", "ISO_COUNTRY_CODE", "EXCHANGE_SYMBOL", "CONSOLIDATED_TAPE_ASSOCIATION" };
-const char IOIQltyInd_realm[]  
+const char IOIQltyInd_realm[]
    { 'H', 'L', 'M' };
-const char *IOIQltyInd_descriptions[]  
+const char *IOIQltyInd_descriptions[]
    { "HIGH", "LOW", "MEDIUM" };
-const f8String IOIShares_realm[]  
+const f8String IOIShares_realm[]
    { "L", "M", "S" };
-const char *IOIShares_descriptions[]  
+const char *IOIShares_descriptions[]
    { "LARGE", "MEDIUM", "SMALL" };
-const char IOITransType_realm[]  
+const char IOITransType_realm[]
    { 'C', 'N', 'R' };
-const char *IOITransType_descriptions[]  
+const char *IOITransType_descriptions[]
    { "CANCEL", "NEW", "REPLACE" };
-const char LastCapacity_realm[]  
+const char LastCapacity_realm[]
    { '1', '2', '3', '4' };
-const char *LastCapacity_descriptions[]  
+const char *LastCapacity_descriptions[]
    { "AGENT", "CROSS_AS_AGENT", "CROSS_AS_PRINCIPAL", "PRINCIPAL" };
-const f8String MsgType_realm[]  
+const f8String MsgType_realm[]
    { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m" };
-const char *MsgType_descriptions[]  
+const char *MsgType_descriptions[]
    { "HEARTBEAT", "TEST_REQUEST", "RESEND_REQUEST", "REJECT", "SEQUENCE_RESET", "LOGOUT", "INDICATION_OF_INTEREST", "ADVERTISEMENT", "EXECUTION_REPORT", "ORDER_CANCEL_REJECT", "LOGON", "NEWS", "EMAIL", "ORDER_SINGLE", "ORDER_LIST", "ORDER_CANCEL_REQUEST", "ORDER_CANCEL_REPLACE_REQUEST", "ORDER_STATUS_REQUEST", "ALLOCATION", "LIST_CANCEL_REQUEST", "LIST_EXECUTE", "LIST_STATUS_REQUEST", "LIST_STATUS", "ALLOCATION_ACK", "DONT_KNOW_TRADE", "QUOTE_REQUEST", "QUOTE", "SETTLEMENT_INSTRUCTIONS", "MARKET_DATA_REQUEST", "MARKET_DATA_SNAPSHOT_FULL_REFRESH", "MARKET_DATA_INCREMENTAL_REFRESH", "MARKET_DATA_REQUEST_REJECT", "QUOTE_CANCEL", "QUOTE_STATUS_REQUEST", "QUOTE_ACKNOWLEDGEMENT", "SECURITY_DEFINITION_REQUEST", "SECURITY_DEFINITION", "SECURITY_STATUS_REQUEST", "SECURITY_STATUS", "TRADING_SESSION_STATUS_REQUEST", "TRADING_SESSION_STATUS", "MASS_QUOTE", "BUSINESS_MESSAGE_REJECT", "BID_REQUEST", "BID_RESPONSE", "LIST_STRIKE_PRICE" };
-const char OrdStatus_realm[]  
+const char OrdStatus_realm[]
    { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E' };
-const char *OrdStatus_descriptions[]  
+const char *OrdStatus_descriptions[]
    { "NEW", "PARTIALLY_FILLED", "FILLED", "DONE_FOR_DAY", "CANCELED", "REPLACED", "PENDING_CANCEL", "STOPPED", "REJECTED", "SUSPENDED", "PENDING_NEW", "CALCULATED", "EXPIRED", "ACCEPTED_FOR_BIDDING", "PENDING_REPLACE" };
-const char OrdType_realm[]  
+const char OrdType_realm[]
    { '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'P' };
-const char *OrdType_descriptions[]  
+const char *OrdType_descriptions[]
    { "MARKET", "LIMIT", "STOP", "STOP_LIMIT", "MARKET_ON_CLOSE", "WITH_OR_WITHOUT", "LIMIT_OR_BETTER", "LIMIT_WITH_OR_WITHOUT", "ON_BASIS", "ON_CLOSE", "LIMIT_ON_CLOSE", "FOREX_C", "PREVIOUSLY_QUOTED", "PREVIOUSLY_INDICATED", "FOREX_F", "FOREX_G", "FOREX_H", "FUNARI", "PEGGED" };
-const char PossDupFlag_realm[]  
+const char PossDupFlag_realm[]
    { 'N', 'Y' };
-const char *PossDupFlag_descriptions[]  
+const char *PossDupFlag_descriptions[]
    { "NO", "YES" };
-const char Rule80A_realm[]  
+const char Rule80A_realm[]
    { 'A', 'B', 'C', 'D', 'E', 'F', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'W', 'X', 'Y', 'Z' };
-const char *Rule80A_descriptions[]  
+const char *Rule80A_descriptions[]
    { "AGENCY_SINGLE_ORDER", "SHORT_EXEMPT_TRANSACTION_B", "PROGRAM_ORDER_NON_INDEX_ARB_FOR_MEMBER_FIRM_ORG", "PROGRAM_ORDER_INDEX_ARB_FOR_MEMBER_FIRM_ORG", "REGISTERED_EQUITY_MARKET_MAKER_TRADES", "SHORT_EXEMPT_TRANSACTION_F", "SHORT_EXEMPT_TRANSACTION_H", "INDIVIDUAL_INVESTOR_SINGLE_ORDER", "PROGRAM_ORDER_INDEX_ARB_FOR_INDIVIDUAL_CUSTOMER", "PROGRAM_ORDER_NON_INDEX_ARB_FOR_INDIVIDUAL_CUSTOMER", "SHORT_EXEMPT_TRANSACTION_FOR_MEMBER_COMPETING_MARKET_MAKER_AFFILIATED_WITH_THE_FIRM_CLEARING_THE_TRADE", "PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_MEMBER", "PROGRAM_ORDER_NON_INDEX_ARB_FOR_OTHER_MEMBER", "COMPETING_DEALER_TRADES_O", "PRINCIPAL", "COMPETING_DEALER_TRADES_R", "SPECIALIST_TRADES", "COMPETING_DEALER_TRADES_T", "PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_AGENCY", "ALL_OTHER_ORDERS_AS_AGENT_FOR_OTHER_MEMBER", "SHORT_EXEMPT_TRANSACTION_FOR_MEMBER_COMPETING_MARKET_MAKER_NOT_AFFILIATED_WITH_THE_FIRM_CLEARING_THE_TRADE", "PROGRAM_ORDER_NON_INDEX_ARB_FOR_OTHER_AGENCY", "SHORT_EXEMPT_TRANSACTION_FOR_NON_MEMBER_COMPETING_MARKET_MAKER" };
-const char Side_realm[]  
+const char Side_realm[]
    { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-const char *Side_descriptions[]  
+const char *Side_descriptions[]
    { "BUY", "SELL", "BUY_MINUS", "SELL_PLUS", "SELL_SHORT", "SELL_SHORT_EXEMPT", "UNDISCLOSED", "CROSS", "CROSS_SHORT" };
-const char TimeInForce_realm[]  
+const char TimeInForce_realm[]
    { '0', '1', '2', '3', '4', '5', '6' };
-const char *TimeInForce_descriptions[]  
+const char *TimeInForce_descriptions[]
    { "DAY", "GOOD_TILL_CANCEL", "AT_THE_OPENING", "IMMEDIATE_OR_CANCEL", "FILL_OR_KILL", "GOOD_TILL_CROSSING", "GOOD_TILL_DATE" };
-const char Urgency_realm[]  
+const char Urgency_realm[]
    { '0', '1', '2' };
-const char *Urgency_descriptions[]  
+const char *Urgency_descriptions[]
    { "NORMAL", "FLASH", "BACKGROUND" };
-const char SettlmntTyp_realm[]  
+const char SettlmntTyp_realm[]
    { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-const char *SettlmntTyp_descriptions[]  
+const char *SettlmntTyp_descriptions[]
    { "REGULAR", "CASH", "NEXT_DAY", "T_PLUS_2", "T_PLUS_3", "T_PLUS_4", "FUTURE", "WHEN_ISSUED", "SELLERS_OPTION", "T_PLUS_5" };
-const char AllocTransType_realm[]  
+const char AllocTransType_realm[]
    { '0', '1', '2', '3', '4', '5' };
-const char *AllocTransType_descriptions[]  
+const char *AllocTransType_descriptions[]
    { "NEW", "REPLACE", "CANCEL", "PRELIMINARY", "CALCULATED", "CALCULATED_WITHOUT_PRELIMINARY" };
-const char OpenClose_realm[]  
+const char OpenClose_realm[]
    { 'C', 'O' };
-const char *OpenClose_descriptions[]  
+const char *OpenClose_descriptions[]
    { "CLOSE", "OPEN" };
-const char ProcessCode_realm[]  
+const char ProcessCode_realm[]
    { '0', '1', '2', '3', '4', '5', '6' };
-const char *ProcessCode_descriptions[]  
+const char *ProcessCode_descriptions[]
    { "REGULAR", "SOFT_DOLLAR", "STEP_IN", "STEP_OUT", "SOFT_DOLLAR_STEP_IN", "SOFT_DOLLAR_STEP_OUT", "PLAN_SPONSOR" };
-const int AllocStatus_realm[]  
+const int AllocStatus_realm[]
    { 0, 1, 2, 3 };
-const char *AllocStatus_descriptions[]  
+const char *AllocStatus_descriptions[]
    { "ACCEPTED", "REJECTED", "PARTIAL_ACCEPT", "RECEIVED" };
-const int AllocRejCode_realm[]  
+const int AllocRejCode_realm[]
    { 0, 1, 2, 3, 4, 5, 6, 7 };
-const char *AllocRejCode_descriptions[]  
+const char *AllocRejCode_descriptions[]
    { "UNKNOWN_ACCOUNT", "INCORRECT_QUANTITY", "INCORRECT_AVERAGE_PRICE", "UNKNOWN_EXECUTING_BROKER_MNEMONIC", "COMMISSION_DIFFERENCE", "UNKNOWN_ORDERID", "UNKNOWN_LISTID", "OTHER" };
-const char EmailType_realm[]  
+const char EmailType_realm[]
    { '0', '1', '2' };
-const char *EmailType_descriptions[]  
+const char *EmailType_descriptions[]
    { "NEW", "REPLY", "ADMIN_REPLY" };
-const char PossResend_realm[]  
+const char PossResend_realm[]
    { 'N', 'Y' };
-const char *PossResend_descriptions[]  
+const char *PossResend_descriptions[]
    { "NO", "YES" };
-const int EncryptMethod_realm[]  
+const int EncryptMethod_realm[]
    { 0, 1, 2, 3, 4, 5, 6 };
-const char *EncryptMethod_descriptions[]  
+const char *EncryptMethod_descriptions[]
    { "NONE", "PKCS", "DES", "PKCS_DES", "PGP_DES", "PGP_DES_MD5", "PEM_DES_MD5" };
-const int CxlRejReason_realm[]  
+const int CxlRejReason_realm[]
    { 0, 1, 2, 3 };
-const char *CxlRejReason_descriptions[]  
+const char *CxlRejReason_descriptions[]
    { "TOO_LATE_TO_CANCEL", "UNKNOWN_ORDER", "BROKER_OPTION", "ORDER_ALREADY_IN_PENDING_CANCEL_OR_PENDING_REPLACE_STATUS" };
-const int OrdRejReason_realm[]  
+const int OrdRejReason_realm[]
    { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
-const char *OrdRejReason_descriptions[]  
+const char *OrdRejReason_descriptions[]
    { "BROKER_OPTION", "UNKNOWN_SYMBOL", "EXCHANGE_CLOSED", "ORDER_EXCEEDS_LIMIT", "TOO_LATE_TO_ENTER", "UNKNOWN_ORDER", "DUPLICATE_ORDER", "DUPLICATE_OF_A_VERBALLY_COMMUNICATED_ORDER", "STALE_ORDER" };
-const char IOIQualifier_realm[]  
+const char IOIQualifier_realm[]
    { 'A', 'C', 'I', 'L', 'M', 'O', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z' };
-const char *IOIQualifier_descriptions[]  
+const char *IOIQualifier_descriptions[]
    { "ALL_OR_NONE", "AT_THE_CLOSE", "IN_TOUCH_WITH", "LIMIT", "MORE_BEHIND", "AT_THE_OPEN", "TAKING_A_POSITION", "AT_THE_MARKET", "READY_TO_TRADE", "PORTFOLIO_SHOW_N", "THROUGH_THE_DAY", "VERSUS", "INDICATION", "CROSSING_OPPORTUNITY", "AT_THE_MIDPOINT", "PRE_OPEN" };
-const char ReportToExch_realm[]  
+const char ReportToExch_realm[]
    { 'N', 'Y' };
-const char *ReportToExch_descriptions[]  
+const char *ReportToExch_descriptions[]
    { "NO", "YES" };
-const char LocateReqd_realm[]  
+const char LocateReqd_realm[]
    { 'N', 'Y' };
-const char *LocateReqd_descriptions[]  
+const char *LocateReqd_descriptions[]
    { "NO", "YES" };
-const char ForexReq_realm[]  
+const char ForexReq_realm[]
    { 'N', 'Y' };
-const char *ForexReq_descriptions[]  
+const char *ForexReq_descriptions[]
    { "NO", "YES" };
-const char GapFillFlag_realm[]  
+const char GapFillFlag_realm[]
    { 'N', 'Y' };
-const char *GapFillFlag_descriptions[]  
+const char *GapFillFlag_descriptions[]
    { "NO", "YES" };
-const char DKReason_realm[]  
+const char DKReason_realm[]
    { 'A', 'B', 'C', 'D', 'E', 'Z' };
-const char *DKReason_descriptions[]  
+const char *DKReason_descriptions[]
    { "UNKNOWN_SYMBOL", "WRONG_SIDE", "QUANTITY_EXCEEDS_ORDER", "NO_MATCHING_ORDER", "PRICE_EXCEEDS_LIMIT", "OTHER" };
-const char IOINaturalFlag_realm[]  
+const char IOINaturalFlag_realm[]
    { 'N', 'Y' };
-const char *IOINaturalFlag_descriptions[]  
+const char *IOINaturalFlag_descriptions[]
    { "NO", "YES" };
-const char MiscFeeType_realm[]  
+const char MiscFeeType_realm[]
    { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-const char *MiscFeeType_descriptions[]  
+const char *MiscFeeType_descriptions[]
    { "REGULATORY", "TAX", "LOCAL_COMMISSION", "EXCHANGE_FEES", "STAMP", "LEVY", "OTHER", "MARKUP", "CONSUMPTION_TAX" };
-const char ResetSeqNumFlag_realm[]  
+const char ResetSeqNumFlag_realm[]
    { 'N', 'Y' };
-const char *ResetSeqNumFlag_descriptions[]  
+const char *ResetSeqNumFlag_descriptions[]
    { "NO", "YES" };
-const char ExecType_realm[]  
+const char ExecType_realm[]
    { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E' };
-const char *ExecType_descriptions[]  
+const char *ExecType_descriptions[]
    { "NEW", "PARTIAL_FILL", "FILL", "DONE_FOR_DAY", "CANCELED", "REPLACE", "PENDING_CANCEL", "STOPPED", "REJECTED", "SUSPENDED", "PENDING_NEW", "CALCULATED", "EXPIRED", "RESTATED", "PENDING_REPLACE" };
-const char SettlCurrFxRateCalc_realm[]  
+const char SettlCurrFxRateCalc_realm[]
    { 'D', 'M' };
-const char *SettlCurrFxRateCalc_descriptions[]  
+const char *SettlCurrFxRateCalc_descriptions[]
    { "DIVIDE", "MULTIPLY" };
-const char SettlInstMode_realm[]  
+const char SettlInstMode_realm[]
    { '0', '1', '2', '3' };
-const char *SettlInstMode_descriptions[]  
+const char *SettlInstMode_descriptions[]
    { "DEFAULT", "STANDING_INSTRUCTIONS_PROVIDED", "SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING", "SPECIFIC_ALLOCATION_ACCOUNT_STANDING" };
-const char SettlInstTransType_realm[]  
+const char SettlInstTransType_realm[]
    { 'C', 'N', 'R' };
-const char *SettlInstTransType_descriptions[]  
+const char *SettlInstTransType_descriptions[]
    { "CANCEL", "NEW", "REPLACE" };
-const char SettlInstSource_realm[]  
+const char SettlInstSource_realm[]
    { '1', '2' };
-const char *SettlInstSource_descriptions[]  
+const char *SettlInstSource_descriptions[]
    { "BROKERS_INSTRUCTIONS", "INSTITUTIONS_INSTRUCTIONS" };
-const f8String SettlLocation_realm[]  
+const f8String SettlLocation_realm[]
    { "CED", "DTC", "EUR", "FED", "ISO Country Code", "PNY", "PTC" };
-const char *SettlLocation_descriptions[]  
+const char *SettlLocation_descriptions[]
    { "CEDEL", "DEPOSITORY_TRUST_COMPANY", "EUROCLEAR", "FEDERAL_BOOK_ENTRY", "LOCAL_MARKET_SETTLE_LOCATION", "PHYSICAL", "PARTICIPANT_TRUST_COMPANY" };
-const f8String SecurityType_realm[]  
+const f8String SecurityType_realm[]
    { "?", "BA", "CB", "CD", "CMO", "CORP", "CP", "CPP", "CS", "FHA", "FHL", "FN", "FOR", "FUT", "GN", "GOVT", "IET", "MF", "MIO", "MPO", "MPP", "MPT", "MUNI", "NONE", "OPT", "PS", "RP", "RVRP", "SL", "TD", "USTB", "WAR", "ZOO" };
-const char *SecurityType_descriptions[]  
+const char *SecurityType_descriptions[]
    { "WILDCARD_ENTRY", "BANKERS_ACCEPTANCE", "CONVERTIBLE_BOND", "CERTIFICATE_OF_DEPOSIT", "COLLATERALIZE_MORTGAGE_OBLIGATION", "CORPORATE_BOND", "COMMERCIAL_PAPER", "CORPORATE_PRIVATE_PLACEMENT", "COMMON_STOCK", "FEDERAL_HOUSING_AUTHORITY", "FEDERAL_HOME_LOAN", "FEDERAL_NATIONAL_MORTGAGE_ASSOCIATION", "FOREIGN_EXCHANGE_CONTRACT", "FUTURE", "GOVERNMENT_NATIONAL_MORTGAGE_ASSOCIATION", "TREASURIES_PLUS_AGENCY_DEBENTURE", "MORTGAGE_IOETTE", "MUTUAL_FUND", "MORTGAGE_INTEREST_ONLY", "MORTGAGE_PRINCIPAL_ONLY", "MORTGAGE_PRIVATE_PLACEMENT", "MISCELLANEOUS_PASS_THRU", "MUNICIPAL_BOND", "NO_ISITC_SECURITY_TYPE", "OPTION", "PREFERRED_STOCK", "REPURCHASE_AGREEMENT", "REVERSE_REPURCHASE_AGREEMENT", "STUDENT_LOAN_MARKETING_ASSOCIATION", "TIME_DEPOSIT", "US_TREASURY_BILL", "WARRANT", "CATS_TIGERS_LIONS" };
-const int StandInstDbType_realm[]  
+const int StandInstDbType_realm[]
    { 0, 1, 2, 3 };
-const char *StandInstDbType_descriptions[]  
+const char *StandInstDbType_descriptions[]
    { "OTHER", "DTC_SID", "THOMSON_ALERT", "A_GLOBAL_CUSTODIAN" };
-const int AllocLinkType_realm[]  
+const int AllocLinkType_realm[]
    { 0, 1 };
-const char *AllocLinkType_descriptions[]  
+const char *AllocLinkType_descriptions[]
    { "F_X_NETTING", "F_X_SWAP" };
-const int PutOrCall_realm[]  
+const int PutOrCall_realm[]
    { 0, 1 };
-const char *PutOrCall_descriptions[]  
+const char *PutOrCall_descriptions[]
    { "PUT", "CALL" };
-const int CoveredOrUncovered_realm[]  
+const int CoveredOrUncovered_realm[]
    { 0, 1 };
-const char *CoveredOrUncovered_descriptions[]  
+const char *CoveredOrUncovered_descriptions[]
    { "COVERED", "UNCOVERED" };
-const int CustomerOrFirm_realm[]  
+const int CustomerOrFirm_realm[]
    { 0, 1 };
-const char *CustomerOrFirm_descriptions[]  
+const char *CustomerOrFirm_descriptions[]
    { "CUSTOMER", "FIRM" };
-const char NotifyBrokerOfCredit_realm[]  
+const char NotifyBrokerOfCredit_realm[]
    { 'N', 'Y' };
-const char *NotifyBrokerOfCredit_descriptions[]  
+const char *NotifyBrokerOfCredit_descriptions[]
    { "NO", "YES" };
-const int AllocHandlInst_realm[]  
+const int AllocHandlInst_realm[]
    { 1, 2, 3 };
-const char *AllocHandlInst_descriptions[]  
+const char *AllocHandlInst_descriptions[]
    { "MATCH", "FORWARD", "FORWARD_AND_MATCH" };
-const int RoutingType_realm[]  
+const int RoutingType_realm[]
    { 1, 2, 3, 4 };
-const char *RoutingType_descriptions[]  
+const char *RoutingType_descriptions[]
    { "TARGET_FIRM", "TARGET_LIST", "BLOCK_FIRM", "BLOCK_LIST" };
-const char Benchmark_realm[]  
+const char Benchmark_realm[]
    { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-const char *Benchmark_descriptions[]  
+const char *Benchmark_descriptions[]
    { "CURVE", "5_YR", "OLD_5", "10_YR", "OLD_10", "30_YR", "OLD_30", "3_MO_LIBOR", "6_MO_LIBOR" };
-const char SubscriptionRequestType_realm[]  
+const char SubscriptionRequestType_realm[]
    { '0', '1', '2' };
-const char *SubscriptionRequestType_descriptions[]  
+const char *SubscriptionRequestType_descriptions[]
    { "SNAPSHOT", "SNAPSHOT_PLUS_UPDATES", "DISABLE_PREVIOUS_SNAPSHOT_PLUS_UPDATE_REQUEST" };
-const int MDUpdateType_realm[]  
+const int MDUpdateType_realm[]
    { 0, 1 };
-const char *MDUpdateType_descriptions[]  
+const char *MDUpdateType_descriptions[]
    { "FULL_REFRESH", "INCREMENTAL_REFRESH" };
-const char AggregatedBook_realm[]  
+const char AggregatedBook_realm[]
    { 'N', 'Y' };
-const char *AggregatedBook_descriptions[]  
+const char *AggregatedBook_descriptions[]
    { "NO", "YES" };
-const char MDEntryType_realm[]  
+const char MDEntryType_realm[]
    { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-const char *MDEntryType_descriptions[]  
+const char *MDEntryType_descriptions[]
    { "BID", "OFFER", "TRADE", "INDEX_VALUE", "OPENING_PRICE", "CLOSING_PRICE", "SETTLEMENT_PRICE", "TRADING_SESSION_HIGH_PRICE", "TRADING_SESSION_LOW_PRICE", "TRADING_SESSION_VWAP_PRICE" };
-const char TickDirection_realm[]  
+const char TickDirection_realm[]
    { '0', '1', '2', '3' };
-const char *TickDirection_descriptions[]  
+const char *TickDirection_descriptions[]
    { "PLUS_TICK", "ZERO_PLUS_TICK", "MINUS_TICK", "ZERO_MINUS_TICK" };
-const f8String QuoteCondition_realm[]  
+const f8String QuoteCondition_realm[]
    { "A", "B", "C", "D", "E", "F", "G", "H", "I" };
-const char *QuoteCondition_descriptions[]  
+const char *QuoteCondition_descriptions[]
    { "OPEN", "CLOSED", "EXCHANGE_BEST", "CONSOLIDATED_BEST", "LOCKED", "CROSSED", "DEPTH", "FAST_TRADING", "NON_FIRM" };
-const f8String TradeCondition_realm[]  
+const f8String TradeCondition_realm[]
    { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N" };
-const char *TradeCondition_descriptions[]  
+const char *TradeCondition_descriptions[]
    { "CASH", "AVERAGE_PRICE_TRADE", "CASH_TRADE", "NEXT_DAY", "OPENING", "INTRADAY_TRADE_DETAIL", "RULE_127_TRADE", "RULE_155_TRADE", "SOLD_LAST", "NEXT_DAY_TRADE", "OPENED", "SELLER", "SOLD", "STOPPED_STOCK" };
-const char MDUpdateAction_realm[]  
+const char MDUpdateAction_realm[]
    { '0', '1', '2' };
-const char *MDUpdateAction_descriptions[]  
+const char *MDUpdateAction_descriptions[]
    { "NEW", "CHANGE", "DELETE" };
-const char MDReqRejReason_realm[]  
+const char MDReqRejReason_realm[]
    { '0', '1', '2', '3', '4', '5', '6', '7', '8' };
-const char *MDReqRejReason_descriptions[]  
+const char *MDReqRejReason_descriptions[]
    { "UNKNOWN_SYMBOL", "DUPLICATE_MDREQID", "INSUFFICIENT_BANDWIDTH", "INSUFFICIENT_PERMISSIONS", "UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE", "UNSUPPORTED_MARKETDEPTH", "UNSUPPORTED_MDUPDATETYPE", "UNSUPPORTED_AGGREGATEDBOOK", "UNSUPPORTED_MDENTRYTYPE" };
-const char DeleteReason_realm[]  
+const char DeleteReason_realm[]
    { '0', '1' };
-const char *DeleteReason_descriptions[]  
+const char *DeleteReason_descriptions[]
    { "CANCELATION", "ERROR" };
-const char OpenCloseSettleFlag_realm[]  
+const char OpenCloseSettleFlag_realm[]
    { '0', '1', '2' };
-const char *OpenCloseSettleFlag_descriptions[]  
+const char *OpenCloseSettleFlag_descriptions[]
    { "DAILY_OPEN", "SESSION_OPEN", "DELIVERY_SETTLEMENT_PRICE" };
-const char FinancialStatus_realm[]  
+const char FinancialStatus_realm[]
    { '1' };
-const char *FinancialStatus_descriptions[]  
+const char *FinancialStatus_descriptions[]
    { "BANKRUPT" };
-const char CorporateAction_realm[]  
+const char CorporateAction_realm[]
    { 'A', 'B', 'C', 'D', 'E' };
-const char *CorporateAction_descriptions[]  
+const char *CorporateAction_descriptions[]
    { "EX_DIVIDEND", "EX_DISTRIBUTION", "EX_RIGHTS", "NEW", "EX_INTEREST" };
-const int QuoteAckStatus_realm[]  
+const int QuoteAckStatus_realm[]
    { 0, 1, 2, 3, 4, 5 };
-const char *QuoteAckStatus_descriptions[]  
+const char *QuoteAckStatus_descriptions[]
    { "ACCEPTED", "CANCELED_FOR_SYMBOL", "CANCELED_FOR_SECURITY_TYPE", "CANCELED_FOR_UNDERLYING", "CANCELED_ALL", "REJECTED" };
-const int QuoteCancelType_realm[]  
+const int QuoteCancelType_realm[]
    { 1, 2, 3, 4 };
-const char *QuoteCancelType_descriptions[]  
+const char *QuoteCancelType_descriptions[]
    { "CANCEL_FOR_SYMBOL", "CANCEL_FOR_SECURITY_TYPE", "CANCEL_FOR_UNDERLYING_SYMBOL", "CANCEL_FOR_ALL_QUOTES" };
-const int QuoteRejectReason_realm[]  
+const int QuoteRejectReason_realm[]
    { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-const char *QuoteRejectReason_descriptions[]  
+const char *QuoteRejectReason_descriptions[]
    { "UNKNOWN_SYMBOL", "EXCHANGE", "QUOTE_REQUEST_EXCEEDS_LIMIT", "TOO_LATE_TO_ENTER", "UNKNOWN_QUOTE", "DUPLICATE_QUOTE", "INVALID_BID_ASK_SPREAD", "INVALID_PRICE", "NOT_AUTHORIZED_TO_QUOTE_SECURITY" };
-const int QuoteResponseLevel_realm[]  
+const int QuoteResponseLevel_realm[]
    { 0, 1, 2 };
-const char *QuoteResponseLevel_descriptions[]  
+const char *QuoteResponseLevel_descriptions[]
    { "NO_ACKNOWLEDGEMENT", "ACKNOWLEDGE_ONLY_NEGATIVE_OR_ERRONEOUS_QUOTES", "ACKNOWLEDGE_EACH_QUOTE_MESSAGES" };
-const int QuoteRequestType_realm[]  
+const int QuoteRequestType_realm[]
    { 1, 2 };
-const char *QuoteRequestType_descriptions[]  
+const char *QuoteRequestType_descriptions[]
    { "MANUAL", "AUTOMATIC" };
-const int SecurityRequestType_realm[]  
+const int SecurityRequestType_realm[]
    { 0, 1, 2, 3 };
-const char *SecurityRequestType_descriptions[]  
+const char *SecurityRequestType_descriptions[]
    { "REQUEST_SECURITY_IDENTITY_AND_SPECIFICATIONS", "REQUEST_SECURITY_IDENTITY_FOR_THE_SPECIFICATIONS_PROVIDED", "REQUEST_LIST_SECURITY_TYPES", "REQUEST_LIST_SECURITIES" };
-const int SecurityResponseType_realm[]  
+const int SecurityResponseType_realm[]
    { 1, 2, 3, 4, 5, 6 };
-const char *SecurityResponseType_descriptions[]  
+const char *SecurityResponseType_descriptions[]
    { "ACCEPT_SECURITY_PROPOSAL_AS_IS", "ACCEPT_SECURITY_PROPOSAL_WITH_REVISIONS_AS_INDICATED_IN_THE_MESSAGE", "LIST_OF_SECURITY_TYPES_RETURNED_PER_REQUEST", "LIST_OF_SECURITIES_RETURNED_PER_REQUEST", "REJECT_SECURITY_PROPOSAL", "CAN_NOT_MATCH_SELECTION_CRITERIA" };
-const char UnsolicitedIndicator_realm[]  
+const char UnsolicitedIndicator_realm[]
    { 'N', 'Y' };
-const char *UnsolicitedIndicator_descriptions[]  
+const char *UnsolicitedIndicator_descriptions[]
    { "NO", "YES" };
-const int SecurityTradingStatus_realm[]  
+const int SecurityTradingStatus_realm[]
    { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
-const char *SecurityTradingStatus_descriptions[]  
+const char *SecurityTradingStatus_descriptions[]
    { "OPENING_DELAY", "TRADING_HALT", "RESUME", "NO_OPEN_NO_RESUME", "PRICE_INDICATION", "TRADING_RANGE_INDICATION", "MARKET_IMBALANCE_BUY", "MARKET_IMBALANCE_SELL", "MARKET_ON_CLOSE_IMBALANCE_BUY", "MARKET_ON_CLOSE_IMBALANCE_SELL", "11", "NO_MARKET_IMBALANCE", "NO_MARKET_ON_CLOSE_IMBALANCE", "ITS_PRE_OPENING", "NEW_PRICE_INDICATION", "TRADE_DISSEMINATION_TIME", "READY_TO_TRADE", "NOT_AVAILABLE_FOR_TRADING", "NOT_TRADED_ON_THIS_MARKET", "UNKNOWN_OR_INVALID" };
-const char HaltReasonChar_realm[]  
+const char HaltReasonChar_realm[]
    { 'D', 'E', 'I', 'M', 'P', 'X' };
-const char *HaltReasonChar_descriptions[]  
+const char *HaltReasonChar_descriptions[]
    { "NEWS_DISSEMINATION", "ORDER_INFLUX", "ORDER_IMBALANCE", "ADDITIONAL_INFORMATION", "NEWS_PENDING", "EQUIPMENT_CHANGEOVER" };
-const char InViewOfCommon_realm[]  
+const char InViewOfCommon_realm[]
    { 'N', 'Y' };
-const char *InViewOfCommon_descriptions[]  
+const char *InViewOfCommon_descriptions[]
    { "NO", "YES" };
-const char DueToRelated_realm[]  
+const char DueToRelated_realm[]
    { 'N', 'Y' };
-const char *DueToRelated_descriptions[]  
+const char *DueToRelated_descriptions[]
    { "NO", "YES" };
-const int Adjustment_realm[]  
+const int Adjustment_realm[]
    { 1, 2, 3 };
-const char *Adjustment_descriptions[]  
+const char *Adjustment_descriptions[]
    { "CANCEL", "ERROR", "CORRECTION" };
-const int TradSesMethod_realm[]  
+const int TradSesMethod_realm[]
    { 1, 2, 3 };
-const char *TradSesMethod_descriptions[]  
+const char *TradSesMethod_descriptions[]
    { "ELECTRONIC", "OPEN_OUTCRY", "TWO_PARTY" };
-const int TradSesMode_realm[]  
+const int TradSesMode_realm[]
    { 1, 2, 3 };
-const char *TradSesMode_descriptions[]  
+const char *TradSesMode_descriptions[]
    { "TESTING", "SIMULATED", "PRODUCTION" };
-const int TradSesStatus_realm[]  
+const int TradSesStatus_realm[]
    { 1, 2, 3, 4, 5 };
-const char *TradSesStatus_descriptions[]  
+const char *TradSesStatus_descriptions[]
    { "HALTED", "OPEN", "CLOSED", "PRE_OPEN", "PRE_CLOSE" };
-const f8String MessageEncoding_realm[]  
+const f8String MessageEncoding_realm[]
    { "EUC-JP", "ISO-2022-JP", "SHIFT_JIS", "UTF-8" };
-const char *MessageEncoding_descriptions[]  
+const char *MessageEncoding_descriptions[]
    { "EUC_JP", "ISO_2022_JP", "SHIFT_JIS", "UTF_8" };
-const int QuoteEntryRejectReason_realm[]  
+const int QuoteEntryRejectReason_realm[]
    { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-const char *QuoteEntryRejectReason_descriptions[]  
+const char *QuoteEntryRejectReason_descriptions[]
    { "UNKNOWN_SYMBOL", "EXCHANGE", "QUOTE_EXCEEDS_LIMIT", "TOO_LATE_TO_ENTER", "UNKNOWN_QUOTE", "DUPLICATE_QUOTE", "INVALID_BID_ASK_SPREAD", "INVALID_PRICE", "NOT_AUTHORIZED_TO_QUOTE_SECURITY" };
-const int SessionRejectReason_realm[]  
+const int SessionRejectReason_realm[]
    { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
-const char *SessionRejectReason_descriptions[]  
+const char *SessionRejectReason_descriptions[]
    { "INVALID_TAG_NUMBER", "REQUIRED_TAG_MISSING", "TAG_NOT_DEFINED_FOR_THIS_MESSAGE_TYPE", "UNDEFINED_TAG", "TAG_SPECIFIED_WITHOUT_A_VALUE", "VALUE_IS_INCORRECT", "INCORRECT_DATA_FORMAT_FOR_VALUE", "DECRYPTION_PROBLEM", "SIGNATURE_PROBLEM", "COMPID_PROBLEM", "SENDINGTIME_ACCURACY_PROBLEM", "INVALID_MSGTYPE" };
-const char BidRequestTransType_realm[]  
+const char BidRequestTransType_realm[]
    { 'C', 'N' };
-const char *BidRequestTransType_descriptions[]  
+const char *BidRequestTransType_descriptions[]
    { "CANCEL", "NO" };
-const char SolicitedFlag_realm[]  
+const char SolicitedFlag_realm[]
    { 'N', 'Y' };
-const char *SolicitedFlag_descriptions[]  
+const char *SolicitedFlag_descriptions[]
    { "NO", "YES" };
-const int ExecRestatementReason_realm[]  
+const int ExecRestatementReason_realm[]
    { 0, 1, 2, 3, 4, 5 };
-const char *ExecRestatementReason_descriptions[]  
+const char *ExecRestatementReason_descriptions[]
    { "GT_CORPORATE_ACTION", "GT_RENEWAL", "VERBAL_CHANGE", "REPRICING_OF_ORDER", "BROKER_OPTION", "PARTIAL_DECLINE_OF_ORDERQTY" };
-const int BusinessRejectReason_realm[]  
+const int BusinessRejectReason_realm[]
    { 0, 1, 2, 3, 4, 5 };
-const char *BusinessRejectReason_descriptions[]  
+const char *BusinessRejectReason_descriptions[]
    { "OTHER", "UNKOWN_ID", "UNKNOWN_SECURITY", "UNSUPPORTED_MESSAGE_TYPE", "APPLICATION_NOT_AVAILABLE", "CONDITIONALLY_REQUIRED_FIELD_MISSING" };
-const char MsgDirection_realm[]  
+const char MsgDirection_realm[]
    { 'R', 'S' };
-const char *MsgDirection_descriptions[]  
+const char *MsgDirection_descriptions[]
    { "RECEIVE", "SEND" };
-const char DiscretionInst_realm[]  
+const char DiscretionInst_realm[]
    { '0', '1', '2', '3', '4', '5' };
-const char *DiscretionInst_descriptions[]  
+const char *DiscretionInst_descriptions[]
    { "RELATED_TO_DISPLAYED_PRICE", "RELATED_TO_MARKET_PRICE", "RELATED_TO_PRIMARY_PRICE", "RELATED_TO_LOCAL_PRIMARY_PRICE", "RELATED_TO_MIDPOINT_PRICE", "RELATED_TO_LAST_TRADE_PRICE" };
-const int LiquidityIndType_realm[]  
+const int LiquidityIndType_realm[]
    { 1, 2, 3, 4 };
-const char *LiquidityIndType_descriptions[]  
+const char *LiquidityIndType_descriptions[]
    { "5_DAY_MOVING_AVERAGE", "20_DAY_MOVING_AVERAGE", "NORMAL_MARKET_SIZE", "OTHER" };
-const char ExchangeForPhysical_realm[]  
+const char ExchangeForPhysical_realm[]
    { 'N', 'Y' };
-const char *ExchangeForPhysical_descriptions[]  
+const char *ExchangeForPhysical_descriptions[]
    { "NO", "YES" };
-const int ProgRptReqs_realm[]  
+const int ProgRptReqs_realm[]
    { 1, 2, 3 };
-const char *ProgRptReqs_descriptions[]  
+const char *ProgRptReqs_descriptions[]
    { "BUYSIDE_EXPLICITLY_REQUESTS_STATUS_USING_STATUSREQUEST", "SELLSIDE_PERIODICALLY_SENDS_STATUS_USING_LISTSTATUS_PERIOD_OPTIONALLY_SPECIFIED_IN_PROGRESSPERIOD", "REAL_TIME_EXECUTION_REPORTS" };
-const int IncTaxInd_realm[]  
+const int IncTaxInd_realm[]
    { 1, 2 };
-const char *IncTaxInd_descriptions[]  
+const char *IncTaxInd_descriptions[]
    { "NET", "GROSS" };
-const char TradeType_realm[]  
+const char TradeType_realm[]
    { 'A', 'G', 'J', 'R' };
-const char *TradeType_descriptions[]  
+const char *TradeType_descriptions[]
    { "AGENCY", "VWAP_GUARANTEE", "GUARANTEED_CLOSE", "RISK_TRADE" };
-const char BasisPxType_realm[]  
+const char BasisPxType_realm[]
    { '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'Z' };
-const char *BasisPxType_descriptions[]  
+const char *BasisPxType_descriptions[]
    { "CLOSING_PRICE_AT_MORNING_SESSION", "CLOSING_PRICE", "CURRENT_PRICE", "SQ", "VWAP_THROUGH_A_DAY", "VWAP_THROUGH_A_MORNING_SESSION", "VWAP_THROUGH_AN_AFTERNOON_SESSION", "VWAP_THROUGH_A_DAY_EXCEPT_YORI", "VWAP_THROUGH_A_MORNING_SESSION_EXCEPT_YORI", "VWAP_THROUGH_AN_AFTERNOON_SESSION_EXCEPT_YORI", "STRIKE", "OPEN", "OTHERS" };
-const int PriceType_realm[]  
+const int PriceType_realm[]
    { 1, 2, 3 };
-const char *PriceType_descriptions[]  
+const char *PriceType_descriptions[]
    { "PERCENTAGE", "PER_SHARE", "FIXED_AMOUNT" };
-const int GTBookingInst_realm[]  
+const int GTBookingInst_realm[]
    { 0, 1, 2 };
-const char *GTBookingInst_descriptions[]  
+const char *GTBookingInst_descriptions[]
    { "BOOK_OUT_ALL_TRADES_ON_DAY_OF_EXECUTION", "ACCUMULATE_EXECUTIONS_UNTIL_ORDER_IS_FILLED_OR_EXPIRES", "ACCUMULATE_UNTIL_VERBALLY_NOTIFIED_OTHERWISE" };
-const int NetGrossInd_realm[]  
+const int NetGrossInd_realm[]
    { 1, 2 };
-const char *NetGrossInd_descriptions[]  
+const char *NetGrossInd_descriptions[]
    { "NET", "GROSS" };
-const char ListExecInstType_realm[]  
+const char ListExecInstType_realm[]
    { '1', '2' };
-const char *ListExecInstType_descriptions[]  
+const char *ListExecInstType_descriptions[]
    { "IMMEDIATE", "WAIT_FOR_EXECUTE_INSTRUCTION" };
-const char CxlRejResponseTo_realm[]  
+const char CxlRejResponseTo_realm[]
    { '1', '2' };
-const char *CxlRejResponseTo_descriptions[]  
+const char *CxlRejResponseTo_descriptions[]
    { "ORDER_CANCEL_REQUEST", "ORDER_CANCEL_REPLACE_REQUEST" };
-const char MultiLegReportingType_realm[]  
+const char MultiLegReportingType_realm[]
    { '1', '2', '3' };
-const char *MultiLegReportingType_descriptions[]  
+const char *MultiLegReportingType_descriptions[]
    { "SINGLE_SECURITY", "INDIVIDUAL_LEG_OF_A_MULTI_LEG_SECURITY", "MULTI_LEG_SECURITY" };
 
 //-------------------------------------------------------------------------------------------------
-const RealmBase realmbases[] 
+const RealmBase realmbases[]
 {
    { reinterpret_cast<const void *>(AdvSide_realm), RealmBase::dt_set, FieldTrait::ft_char, 4, AdvSide_descriptions },
    { reinterpret_cast<const void *>(AdvTransType_realm), RealmBase::dt_set, FieldTrait::ft_string, 3, AdvTransType_descriptions },
@@ -623,7 +623,7 @@ const RealmBase realmbases[]
 
 //-------------------------------------------------------------------------------------------------
 extern const db_BaseEntry::Pair fldpairs[];
-const db_BaseEntry::Pair fldpairs[] 
+const db_BaseEntry::Pair fldpairs[]
 {
    { 1, { Type2Type<FIX4200::Account>(), "Account", 1 } },
    { 2, { Type2Type<FIX4200::AdvId>(), "AdvId", 2 } },
@@ -1024,7 +1024,10 @@ const db_BaseEntry::Pair fldpairs[]
    { 443, { Type2Type<FIX4200::StrikeTime>(), "StrikeTime", 443 } },
    { 444, { Type2Type<FIX4200::ListStatusText>(), "ListStatusText", 444 } },
    { 445, { Type2Type<FIX4200::EncodedListStatusTextLen>(), "EncodedListStatusTextLen", 445 } },
-   { 446, { Type2Type<FIX4200::EncodedListStatusText>(), "EncodedListStatusText", 446 } }
+   { 446, { Type2Type<FIX4200::EncodedListStatusText>(), "EncodedListStatusText", 446 } },
+   { 553, { Type2Type<FIX4200::Username>(), "Username", 553 } },
+   { 554, { Type2Type<FIX4200::Password>(), "Password", 554 } },
+
 }; // 400
 } // namespace FIX4200
 

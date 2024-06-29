@@ -346,7 +346,7 @@ class Logon : public Message
    static F8_FIX4200_API const FieldTrait _traits[];
    static F8_FIX4200_API const FieldTrait_Hash_Array _ftha;
    static F8_FIX4200_API const MsgType _msgtype;
-   static F8_FIX4200_API const unsigned _fieldcnt = 7;
+   static F8_FIX4200_API const unsigned _fieldcnt = 9;
 
 public:
    explicit Logon(bool deepctor=true) : Message(ctx(), _msgtype(), _traits, _fieldcnt, &_ftha)

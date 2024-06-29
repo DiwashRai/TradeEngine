@@ -27,7 +27,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         Poco::Net
         Poco::NetSSL
         fix8
-        Common::fix_compiled
+        Common
         ${ZSTD_TARGET}
         databento::databento
 )

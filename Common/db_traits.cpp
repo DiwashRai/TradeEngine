@@ -207,7 +207,7 @@ const FieldTrait IndicationofInterest::NoIOIQualifiers::_traits[]
 {
    { 104, 7,  1,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    IndicationofInterest::NoIOIQualifiers::_ftha(IndicationofInterest::NoIOIQualifiers::_traits, NoIOIQualifiers::_fieldcnt);
 const MsgType IndicationofInterest::NoIOIQualifiers::_msgtype("NoIOIQualifiers");
 //-------------------------------------------------------------------------------------------------
@@ -263,7 +263,7 @@ const FieldTrait ExecutionReport::NoContraBrokers::_traits[]
 {
    { 337,15,  2,  0,0x04}, { 375,15,  1,  0,0x04}, { 437,10,  3,  0,0x04}, { 438,22,  4,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    ExecutionReport::NoContraBrokers::_ftha(ExecutionReport::NoContraBrokers::_traits, NoContraBrokers::_fieldcnt);
 const MsgType ExecutionReport::NoContraBrokers::_msgtype("NoContraBrokers");
 //-------------------------------------------------------------------------------------------------
@@ -280,7 +280,8 @@ const MsgType OrderCancelReject::_msgtype("9");
 const FieldTrait Logon::_traits[]
 {
    {  95, 2,  3,  0,0x04}, {  96,28,  4,  0,0x04}, {  98, 1,  1,  0,0x05}, { 108, 1,  2,  0,0x05},
-   { 141, 8,  5,  0,0x04}, { 383, 1,  6,  0,0x04}, { 384, 1,  7,  0,0x0c}
+   { 141, 8,  5,  0,0x04}, { 383, 1,  6,  0,0x04}, { 384, 1,  7,  0,0x0c}, { 553,15,  8,  0,0x04},
+   { 554,15,  9,  0,0x04}
 };
 const FieldTrait_Hash_Array Logon::_ftha(Logon::_traits, Logon::_fieldcnt);
 const MsgType Logon::_msgtype("A");
@@ -289,7 +290,7 @@ const FieldTrait Logon::NoMsgTypes::_traits[]
 {
    { 372,15,  1,  0,0x04}, { 385, 7,  2,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    Logon::NoMsgTypes::_ftha(Logon::NoMsgTypes::_traits, NoMsgTypes::_fieldcnt);
 const MsgType Logon::NoMsgTypes::_msgtype("NoMsgTypes");
 //-------------------------------------------------------------------------------------------------
@@ -399,7 +400,7 @@ const FieldTrait NewOrderList::NoOrders::_traits[]
    { 389,12, 72,  0,0x04}, { 401, 1, 38,  0,0x04}, { 427, 1, 55,  0,0x04}, { 432,25, 53,  0,0x04},
    { 439,15, 73,  0,0x04}, { 440,15, 74,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    NewOrderList::NoOrders::_ftha(NewOrderList::NoOrders::_traits, NoOrders::_fieldcnt);
 const MsgType NewOrderList::NoOrders::_msgtype("NoOrders");
 //-------------------------------------------------------------------------------------------------
@@ -494,7 +495,7 @@ const FieldTrait Allocation::NoOrders::_traits[]
    {  11,15,  1,  0,0x04}, {  37,15,  2,  0,0x04}, {  66,15,  4,  0,0x04}, { 105,15,  5,  0,0x04},
    { 198,15,  3,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    Allocation::NoOrders::_ftha(Allocation::NoOrders::_traits, NoOrders::_fieldcnt);
 const MsgType Allocation::NoOrders::_msgtype("NoOrders");
 //-------------------------------------------------------------------------------------------------
@@ -507,7 +508,7 @@ const FieldTrait Allocation::NoAllocs::_traits[]
    { 160, 7, 22,  0,0x04}, { 161,15,  8,  0,0x04}, { 208, 8,  6,  0,0x04}, { 209, 1,  7,  0,0x04},
    { 360, 2,  9,  0,0x04}, { 361,28, 10,  0,0x04}, { 366,11,  2,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    Allocation::NoAllocs::_ftha(Allocation::NoAllocs::_traits, NoAllocs::_fieldcnt);
 const MsgType Allocation::NoAllocs::_msgtype("NoAllocs");
 //-------------------------------------------------------------------------------------------------
@@ -515,7 +516,7 @@ const FieldTrait Allocation::NoAllocs::NoMiscFees::_traits[]
 {
    { 137,13,  1,  0,0x04}, { 138,19,  2,  0,0x04}, { 139, 7,  3,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    Allocation::NoAllocs::NoMiscFees::_ftha(Allocation::NoAllocs::NoMiscFees::_traits, NoMiscFees::_fieldcnt);
 const MsgType Allocation::NoAllocs::NoMiscFees::_msgtype("NoMiscFees");
 //-------------------------------------------------------------------------------------------------
@@ -523,7 +524,7 @@ const FieldTrait Allocation::NoExecs::_traits[]
 {
    {  17,15,  2,  0,0x04}, {  29, 7,  4,  0,0x04}, {  31,11,  3,  0,0x04}, {  32,10,  1,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    Allocation::NoExecs::_ftha(Allocation::NoExecs::_traits, NoExecs::_fieldcnt);
 const MsgType Allocation::NoExecs::_msgtype("NoExecs");
 //-------------------------------------------------------------------------------------------------
@@ -565,7 +566,7 @@ const FieldTrait ListStatus::NoOrders::_traits[]
    {  58,15,  8,  0,0x04}, {  84,10,  5,  0,0x05}, { 103, 1,  7,  0,0x04}, { 151,10,  4,  0,0x05},
    { 354, 2,  9,  0,0x04}, { 355,28, 10,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    ListStatus::NoOrders::_ftha(ListStatus::NoOrders::_traits, NoOrders::_fieldcnt);
 const MsgType ListStatus::NoOrders::_msgtype("NoOrders");
 //-------------------------------------------------------------------------------------------------
@@ -610,7 +611,7 @@ const FieldTrait QuoteRequest::NoRelatedSym::_traits[]
    { 231, 9, 11,  0,0x04}, { 303, 1, 21,  0,0x04}, { 336,15, 22,  0,0x04}, { 348, 2, 15,  0,0x04},
    { 349,28, 16,  0,0x04}, { 350, 2, 18,  0,0x04}, { 351,28, 19,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    QuoteRequest::NoRelatedSym::_ftha(QuoteRequest::NoRelatedSym::_traits, NoRelatedSym::_fieldcnt);
 const MsgType QuoteRequest::NoRelatedSym::_msgtype("NoRelatedSym");
 //-------------------------------------------------------------------------------------------------
@@ -661,7 +662,7 @@ const FieldTrait MarketDataRequest::NoRelatedSym::_traits[]
    { 207,20, 13,  0,0x04}, { 223, 9, 12,  0,0x04}, { 231, 9, 11,  0,0x04}, { 336,15, 20,  0,0x04},
    { 348, 2, 15,  0,0x04}, { 349,28, 16,  0,0x04}, { 350, 2, 18,  0,0x04}, { 351,28, 19,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    MarketDataRequest::NoRelatedSym::_ftha(MarketDataRequest::NoRelatedSym::_traits, NoRelatedSym::_fieldcnt);
 const MsgType MarketDataRequest::NoRelatedSym::_msgtype("NoRelatedSym");
 //-------------------------------------------------------------------------------------------------
@@ -669,7 +670,7 @@ const FieldTrait MarketDataRequest::NoMDEntryTypes::_traits[]
 {
    { 269, 7,  1,  0,0x05}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    MarketDataRequest::NoMDEntryTypes::_ftha(MarketDataRequest::NoMDEntryTypes::_traits, NoMDEntryTypes::_fieldcnt);
 const MsgType MarketDataRequest::NoMDEntryTypes::_msgtype("NoMDEntryTypes");
 //-------------------------------------------------------------------------------------------------
@@ -696,7 +697,7 @@ const FieldTrait MarketDataSnapshotFullRefresh::NoMDEntries::_traits[]
    { 299,15, 23,  0,0x04}, { 336,15,  9,  0,0x04}, { 346, 1, 26,  0,0x04}, { 354, 2, 29,  0,0x04},
    { 355,28, 30,  0,0x04}, { 432,25, 17,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    MarketDataSnapshotFullRefresh::NoMDEntries::_ftha(MarketDataSnapshotFullRefresh::NoMDEntries::_traits, NoMDEntries::_fieldcnt);
 const MsgType MarketDataSnapshotFullRefresh::NoMDEntries::_msgtype("NoMDEntries");
 //-------------------------------------------------------------------------------------------------
@@ -724,7 +725,7 @@ const FieldTrait MarketDataIncrementalRefresh::NoMDEntries::_traits[]
    { 348, 2, 20,  0,0x04}, { 349,28, 21,  0,0x04}, { 350, 2, 23,  0,0x04}, { 351,28, 24,  0,0x04},
    { 354, 2, 55,  0,0x04}, { 355,28, 56,  0,0x04}, { 387,10, 53,  0,0x04}, { 432,25, 42,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    MarketDataIncrementalRefresh::NoMDEntries::_ftha(MarketDataIncrementalRefresh::NoMDEntries::_traits, NoMDEntries::_fieldcnt);
 const MsgType MarketDataIncrementalRefresh::NoMDEntries::_msgtype("NoMDEntries");
 //-------------------------------------------------------------------------------------------------
@@ -752,7 +753,7 @@ const FieldTrait QuoteCancel::NoQuoteEntries::_traits[]
    { 207,20, 13,  0,0x04}, { 223, 9, 12,  0,0x04}, { 231, 9, 11,  0,0x04}, { 311,15, 20,  0,0x04},
    { 348, 2, 15,  0,0x04}, { 349,28, 16,  0,0x04}, { 350, 2, 18,  0,0x04}, { 351,28, 19,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    QuoteCancel::NoQuoteEntries::_ftha(QuoteCancel::NoQuoteEntries::_traits, NoQuoteEntries::_fieldcnt);
 const MsgType QuoteCancel::NoQuoteEntries::_msgtype("NoQuoteEntries");
 //-------------------------------------------------------------------------------------------------
@@ -785,7 +786,7 @@ const FieldTrait QuoteAcknowledgement::NoQuoteSets::_traits[]
    { 362, 2, 16,  0,0x04}, { 363,28, 17,  0,0x04}, { 364, 2, 19,  0,0x04}, { 365,28, 20,  0,0x04},
    { 435, 9, 13,  0,0x04}, { 436, 9, 12,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    QuoteAcknowledgement::NoQuoteSets::_ftha(QuoteAcknowledgement::NoQuoteSets::_traits, NoQuoteSets::_fieldcnt);
 const MsgType QuoteAcknowledgement::NoQuoteSets::_msgtype("NoQuoteSets");
 //-------------------------------------------------------------------------------------------------
@@ -798,7 +799,7 @@ const FieldTrait QuoteAcknowledgement::NoQuoteSets::NoQuoteEntries::_traits[]
    { 348, 2, 16,  0,0x04}, { 349,28, 17,  0,0x04}, { 350, 2, 19,  0,0x04}, { 351,28, 20,  0,0x04},
    { 368, 1, 21,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    QuoteAcknowledgement::NoQuoteSets::NoQuoteEntries::_ftha(QuoteAcknowledgement::NoQuoteSets::NoQuoteEntries::_traits, NoQuoteEntries::_fieldcnt);
 const MsgType QuoteAcknowledgement::NoQuoteSets::NoQuoteEntries::_msgtype("NoQuoteEntries");
 //-------------------------------------------------------------------------------------------------
@@ -912,7 +913,7 @@ const FieldTrait MassQuote::NoQuoteSets::_traits[]
    { 362, 2, 16,  0,0x04}, { 363,28, 17,  0,0x04}, { 364, 2, 19,  0,0x04}, { 365,28, 20,  0,0x04},
    { 367,22, 21,  0,0x04}, { 435, 9, 13,  0,0x04}, { 436, 9, 12,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    MassQuote::NoQuoteSets::_ftha(MassQuote::NoQuoteSets::_traits, NoQuoteSets::_fieldcnt);
 const MsgType MassQuote::NoQuoteSets::_msgtype("NoQuoteSets");
 //-------------------------------------------------------------------------------------------------
@@ -928,7 +929,7 @@ const FieldTrait MassQuote::NoQuoteSets::NoQuoteEntries::_traits[]
    { 223, 9, 13,  0,0x04}, { 231, 9, 12,  0,0x04}, { 299,15,  1,  0,0x05}, { 336,15, 31,  0,0x04},
    { 348, 2, 16,  0,0x04}, { 349,28, 17,  0,0x04}, { 350, 2, 19,  0,0x04}, { 351,28, 20,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    MassQuote::NoQuoteSets::NoQuoteEntries::_ftha(MassQuote::NoQuoteSets::NoQuoteEntries::_traits, NoQuoteEntries::_fieldcnt);
 const MsgType MassQuote::NoQuoteSets::NoQuoteEntries::_msgtype("NoQuoteEntries");
 //-------------------------------------------------------------------------------------------------
@@ -960,7 +961,7 @@ const FieldTrait BidRequest::NoBidDescriptors::_traits[]
    { 403, 9,  7,  0,0x04}, { 404,13,  4,  0,0x04}, { 405, 9,  8,  0,0x04}, { 406,13,  9,  0,0x04},
    { 407, 9, 10,  0,0x04}, { 408,13, 11,  0,0x04}, { 441, 1,  5,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    BidRequest::NoBidDescriptors::_ftha(BidRequest::NoBidDescriptors::_traits, NoBidDescriptors::_fieldcnt);
 const MsgType BidRequest::NoBidDescriptors::_msgtype("NoBidDescriptors");
 //-------------------------------------------------------------------------------------------------
@@ -969,7 +970,7 @@ const FieldTrait BidRequest::NoBidComponents::_traits[]
    {   1,15,  7,  0,0x04}, {  54, 7,  2,  0,0x04}, {  63, 7,  5,  0,0x04}, {  64,25,  6,  0,0x04},
    {  66,15,  1,  0,0x04}, { 336,15,  3,  0,0x04}, { 430, 1,  4,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    BidRequest::NoBidComponents::_ftha(BidRequest::NoBidComponents::_traits, NoBidComponents::_fieldcnt);
 const MsgType BidRequest::NoBidComponents::_msgtype("NoBidComponents");
 //-------------------------------------------------------------------------------------------------
@@ -987,7 +988,7 @@ const FieldTrait BidResponse::NoBidComponents::_traits[]
    { 336,15, 12,  0,0x04}, { 354, 2, 14,  0,0x04}, { 355,28, 15,  0,0x04}, { 406,13,  8,  0,0x04},
    { 421,15,  4,  0,0x04}, { 423, 1,  7,  0,0x04}, { 430, 1,  9,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    BidResponse::NoBidComponents::_ftha(BidResponse::NoBidComponents::_traits, NoBidComponents::_fieldcnt);
 const MsgType BidResponse::NoBidComponents::_msgtype("NoBidComponents");
 //-------------------------------------------------------------------------------------------------
@@ -1008,7 +1009,7 @@ const FieldTrait ListStrikePrice::NoStrikes::_traits[]
    { 231, 9, 11,  0,0x04}, { 348, 2, 15,  0,0x04}, { 349,28, 16,  0,0x04}, { 350, 2, 18,  0,0x04},
    { 351,28, 19,  0,0x04}, { 354, 2, 26,  0,0x04}, { 355,28, 27,  0,0x04}
 };
-const FieldTrait_Hash_Array 
+const FieldTrait_Hash_Array
    ListStrikePrice::NoStrikes::_ftha(ListStrikePrice::NoStrikes::_traits, NoStrikes::_fieldcnt);
 const MsgType ListStrikePrice::NoStrikes::_msgtype("NoStrikes");
 //-------------------------------------------------------------------------------------------------

@@ -10,6 +10,8 @@
 #include "fix8/f8includes.hpp"
 #include "db_router.hpp"
 
+using FIX8::f8String;
+
 //-------------------------------------------------------------------------------------------------
 // server session and router classes
 //-------------------------------------------------------------------------------------------------
@@ -78,8 +80,10 @@ class db_session_server : public FIX8::Session
    db_router_server _router;
 
 public:
-   db_session_server(const FIX8::F8MetaCntx &ctx, const FIX8::sender_comp_id &sci, FIX8::Persister *persist = 0,
-                     FIX8::Logger *logger = 0, FIX8::Logger *plogger = 0)
+   db_session_server(const FIX8::F8MetaCntx &ctx,
+                     const FIX8::sender_comp_id &sci,
+                     FIX8::Persister *persist = 0, FIX8::Logger *logger = 0,
+                     FIX8::Logger *plogger = 0)
        : Session(ctx, sci, persist, logger, plogger), _router(*this) {}
 
    // Override these methods if required but remember to call the base class method first.
@@ -107,6 +111,9 @@ public:
 
    bool handle_application(const unsigned seqnum,
                            const FIX8::Message *&msg) override;
+
+   void state_change(const FIX8::States::SessionStates before,
+                     const FIX8::States::SessionStates after) override;
 };
 
 class db_session_client;
@@ -174,12 +181,15 @@ class db_session_client : public FIX8::Session
    db_router_client _router;
 
 public:
-   db_session_client(const FIX8::F8MetaCntx& ctx, const FIX8::SessionID& sid, FIX8::Persister *persist=0,
-      FIX8::Logger *logger=0, FIX8::Logger *plogger=0) : Session(ctx, sid, persist, logger, plogger), _router(*this) {}
+   db_session_client(const FIX8::F8MetaCntx &ctx, const FIX8::SessionID &sid,
+                     FIX8::Persister *persist = 0, FIX8::Logger *logger = 0,
+                     FIX8::Logger *plogger = 0)
+       : Session(ctx, sid, persist, logger, plogger), _router(*this) {}
 
    // Override these methods if required but remember to call the base class method first.
    // bool handle_logon(const unsigned seqnum, const FIX8::Message *msg);
-   // Message *generate_logon(const unsigned heartbeat_interval, const f8String davi=f8String());
+   FIX8::Message *generate_logon(const unsigned heartbeat_interval,
+                                 const f8String davi=f8String()) override;
    // bool handle_logout(const unsigned seqnum, const FIX8::Message *msg);
    // Message *generate_logout();
    // bool handle_heartbeat(const unsigned seqnum, const FIX8::Message *msg);
@@ -207,6 +217,10 @@ public:
       return enforce(seqnum, msg) || msg->process(_router);
    }
    */
+   void state_change(const FIX8::States::SessionStates before,
+                     const FIX8::States::SessionStates after) override;
 };
+
+#define loginfo(msg) log(msg, FIX8::Logger::Level::Info)
 
 #endif // FIX8_64625F73657373696F6E2E687070_

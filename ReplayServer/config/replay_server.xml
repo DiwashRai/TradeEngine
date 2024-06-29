@@ -21,6 +21,11 @@
              active="true"
              sender_comp_id="ReplayServer" />
 
+    <log     name="session_log"
+             type="session"
+             filename="|/bin/cat"
+             rotation="5"
+             flags="timestamp|sequence|thread"/>
     <log     name="session_log_file"
              type="session"
              filename="./log/myfix_client_session.log"

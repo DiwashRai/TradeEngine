@@ -14,11 +14,11 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         Poco::Net
         Poco::NetSSL
         fix8
-        Common::fix_compiled
+        Common
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src
-        ${CMAKE_SOURCE_DIR}/Fix8-compiled
+        ${CMAKE_SOURCE_DIR}/Common
         ${CMAKE_SOURCE_DIR}/Utils
 )
